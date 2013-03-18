@@ -1,10 +1,18 @@
-body{
+html, body{
+    margin:0;
+    height:100%;
+    width:100%;
     font-family: sans-serif;
+    background-color: lightgrey;
 }
 
 #wrapper{  
+    height: 100%;
     width:66%;  
     margin:auto;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
 }  
   
 #header{   
@@ -37,7 +45,6 @@ h2{
     width :30%;  
     float:rightright;  
     clear:none;  
-    background-color:#ddd;  
 }  
   
 h1{  
