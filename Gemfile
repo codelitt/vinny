@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
+gem 'heroku'
+gem 'sinatra', :require => 'sinatra/base'
 gem 'thin'
-gem 'haml'
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
+gem 'less'
+gem 'uglifier'	
+gem "therubyracer" 
+gem 'execjs'

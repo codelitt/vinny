@@ -1,15 +1,37 @@
-require 'bundler/setup'
-require 'sinatra'
-require 'thin'
-require 'haml'
+require 'rubygems' if RUBY_VERSION < "1.9"
+require 'sinatra/base'
+require 'sinatra/assetpack'
+require 'erb'
+require 'uglifier'
 
-class Vinny < Sinatra::Base 
-	set :root, File.dirname(__FILE__)
+class App < Sinatra::Base
+  set :root, File.dirname(__FILE__)
+  Less.paths <<  "#{App.root}/app/css" 
+
+  register Sinatra::AssetPack
+
+  assets do 
+    serve '/images', from: 'app/image'    # Optional
+
+    js :bootstrap, '/js/main.js', [
+      '/js/bootstrap*.js'
+    ]
+
+    css :bootstrap, [
+      '/css/theme.css',
+      '/css/responsive.css'
+    ]
+
+    js_compression :uglify
+
+    prebuild true
+  end
 
 	get '/' do 
-		haml :index
+		erb :index
 	end
 
-  # start the server if ruby file executed directly
-  run! if app_file == $0
+  get '/contact' do 
+    erb :contact
+  end
 end
