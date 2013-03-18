@@ -1,6 +1,10 @@
+body{
+    font-family: sans-serif;
+}
+
 #wrapper{  
     width:66%;  
-    margin:auto;  
+    margin:auto;
 }  
   
 #header{   
@@ -11,6 +15,9 @@
     font-size:200%;  
 } 
 
+#content{
+}
+
 img{
     max-width:200px;
     height:auto;
@@ -18,7 +25,6 @@ img{
   
 h2{  
     font-size:130%;  
-    font-family:sans-serif;  
 }  
   
 #content{  
@@ -37,17 +43,31 @@ h2{
 h1{  
     font-size:150%;  
 }  
-  
+
+
 #footer{  
     clear:both;
     position: absolute;
-    bottom:0;
+    bottom:0px;
     width: 100%;
     background-color:none;  
     font-size:75%;  
-    font-family:sans-serif;   
 }  
-  
+
+.mission{
+    padding-bottom: 20px;
+}
+
+.services{
+    padding-bottom: 20px;
+}
+
+.contact{
+
+    position: absolute;
+    margin-bottom: 20px;
+}
+
 ol{  
     padding-top:20px;  
     background-color:#ade;  
@@ -55,14 +75,9 @@ ol{
 }  
   
 li{  
-    color:white;  
-    text-align:center;  
-    display:inline;  
-    padding:5px 10px 0 10px;  
-    margin-right:2px;  
-    background-color: #69a;  
+ 
 }  
   
 a{  
-    text-decoration:none;  
+
 }  
